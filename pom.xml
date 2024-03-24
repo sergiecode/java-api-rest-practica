@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.4</version>
+		<version>3.2.2</version>
 		<relativePath/> 
 	</parent>
 	<groupId>com.curso.java</groupId>
@@ -14,7 +14,7 @@
 	<name>apirest</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>18</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -52,17 +52,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			 <!-- Configuración del Plugin de Compilador de Maven -->
-		        <plugin>
-		                <groupId>org.apache.maven.plugins</groupId>
-		                <artifactId>maven-compiler-plugin</artifactId>
-		                <version>3.11.0</version> <!-- Versión del plugin, puede variar -->
-
-                		<configuration>
-		                    <source>1.8</source> <!-- Versión de compatibilidad de origen -->
-                		    <target>1.8</target> <!-- Versión de compatibilidad de objetivo -->
-		                </configuration>
-            		</plugin>
 		</plugins>
 	</build>
 

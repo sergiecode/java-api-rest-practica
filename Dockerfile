@@ -1,7 +1,8 @@
 FROM eclipse-temurin:21-jdk as build
 COPY . /app
 WORKDIR /app
-RUN ./mvnw --no-transfer-progress clean package -DskipTests
+RUN chmod +x mvnw  # Agregar esta línea para cambiar los permisos del archivo mvnw
+RUN ./mvnw package -DskipTests
 RUN mv -f target/*.jar app.jar
 
 FROM eclipse-temurin:21-jre

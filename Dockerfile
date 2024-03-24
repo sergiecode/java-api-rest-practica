@@ -14,7 +14,8 @@ RUN mv -f target/*.jar app.jar
 FROM eclipse-temurin:21-jre
 
 # Definir el puerto en el que se ejecutará la aplicación
-EXPOSE 8080
+ARG PORT
+ENV PORT=${PORT}
 
 # Copiar el archivo JAR de la aplicación compilada
 COPY --from=build /app/app.jar .
@@ -24,4 +25,4 @@ RUN useradd runtime
 USER runtime
 
 # Establecer el comando de inicio de la aplicación
-ENTRYPOINT [ "java", "-jar", "app.jar" ]
+ENTRYPOINT [ "java", "-Dserver.port=${PORT}", "-jar", "app.jar" ]

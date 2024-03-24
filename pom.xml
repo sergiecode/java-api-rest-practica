@@ -52,6 +52,17 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			 <!-- Configuración del Plugin de Compilador de Maven -->
+		        <plugin>
+		                <groupId>org.apache.maven.plugins</groupId>
+		                <artifactId>maven-compiler-plugin</artifactId>
+		                <version>3.11.0</version> <!-- Versión del plugin, puede variar -->
+
+                		<configuration>
+		                    <source>1.8</source> <!-- Versión de compatibilidad de origen -->
+                		    <target>1.8</target> <!-- Versión de compatibilidad de objetivo -->
+		                </configuration>
+            		</plugin>
 		</plugins>
 	</build>
 
